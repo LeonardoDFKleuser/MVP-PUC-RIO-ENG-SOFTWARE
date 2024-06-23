@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  back:
+    image: python:3.11.5
+    build: 
+      dockerfile: Sprint-1/meu_app_api/Dockerfile
+    ports:
+      - "5000:5000"
+    restart: always
+    container_name: meu_app_api
+    networks:
+      - meu_app_net
+
+  front:
+    depends_on:
+      - meu_app_api
+    image: node:lts
+    build: 
+      dockerfile: Sprint-1/meu_app_front/Dockerfile
+    ports:
+      - "3000:80"
+    restart: always
+    container_name: meu_app_front
+    networks:
+      - meu_app_net
+
+networks:
+  meu_app_net: {}
