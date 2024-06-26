@@ -6,4 +6,10 @@ O objetivo aqui é apresentar um site com uma unica tela no qual serve como um l
 
 ## Como executar
 
-Para abrir o front da aplicação basta ir no diretorio "meu_app_front" e abrir o arquivo "index.html" no seu navegador de preferencia
+Para abrir o front da aplicação basta ir no diretorio "meu_app_front" e abrir o terminal para essa pasta e rodar o comando para instalar as dependencias do front do projeto:
+
+npm install
+
+e em seguida rode o seguint comando para iniciar o front:
+
+npm start 
