@@ -1,9 +1,7 @@
-
 services:
   back:
-    image: python:3.11.5
-    build: 
-      dockerfile: meu_app_api/Dockerfile
+    build:
+      dockerfile: ./meu_app_api/Dockerfile
     ports:
       - "5000:5000"
     restart: always
@@ -11,18 +9,18 @@ services:
     networks:
       - meu_app_net
 
-  front: 
-    links:
-     - back
-    image: node:lts
-    build: 
-      dockerfile: meu_app_front/Dockerfile
+  front:
+    build:
+      dockerfile: ./meu_app_front/Dockerfile
     ports:
       - "3000:3000"
+    links:
+      - back
     restart: always
     container_name: meu_app_front
     networks:
       - meu_app_net
 
 networks:
-  meu_app_net: {}
+  meu_app_net:
+    driver: bridge
