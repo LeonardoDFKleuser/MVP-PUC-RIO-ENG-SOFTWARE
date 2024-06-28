@@ -22,7 +22,7 @@ Comando para a ativar a pasta env:
     env/Scripts/activate
 
 Comando para instalar os requirements:
-    (env)$ pip install -r requirements.txt
+    (env)$ pip install -r requirements.txt --user
 ```
 
 Este comando instala as dependências/bibliotecas, descritas no arquivo `requirements.txt`.
