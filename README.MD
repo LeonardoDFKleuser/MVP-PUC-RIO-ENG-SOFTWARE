@@ -35,10 +35,21 @@ Mas para rodar os 2 simultaneamente atravez do docker que deve ser baixado anter
 
 https://www.docker.com/products/docker-desktop/
 
-após o Docker instalado e com o aplicativo aberto na maquina rode os 2 comando a fim de levantar o servidor:
+Após o Docker instalado e com o aplicativo aberto na maquina rode os 2 comando a fim de levantar o servidor:
 
 ```
 docker-compose build --no-cache --progress=plain
 docker-compose up -d
 ```
 
+
+## Como acessar site 
+
+Com o Docker para acessar o backend acesso o endpoint (http://localhost:5000/openapi/) e para o front-end (http://localhost:3000)
+
+
+Ao fim rode o seguinte comando para parar a execução do container docker 
+
+```
+docker-compose down
+```
